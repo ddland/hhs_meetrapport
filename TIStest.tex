@@ -1,0 +1,52 @@
+\documentclass[10pt]{TISmeetrapport}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[bf,small]{caption}
+\usepackage{listings}
+
+\practicum{\LaTeX}
+\nummerproef{1}
+\naamproef{Voorbeeld meetrapport}
+\studentauteur{D.D.~Land}
+\studentuitvoer{D.D.~Land en L.~Arntzen}
+\studentklas{NP2.k}
+\datumuitvoer{2 mei 2015}
+\datuminleveren{\today}
+\docent{D.D.~land}
+
+\begin{document}
+\makecoverpage
+\section{Doel van de proef / dit document}
+Dit document wordt gebruikt om de {\bf TISmeetrapport} \LaTeX~class te demonsteren. Na het doorlezen van dit document (en het bekijken van de sourcecode) is de lezer in staat om zelf een meetrapport te maken die voldoet aan de TIS-TN eisen. 
+
+\section{Benodigheden}
+Dit document is geschreven in \LaTeX~ \citep{Lamport1985}. Om dit document te kunnen compileren is een \LaTeX omgeving nodig. In een Microsoft Windows omgeving kan MikTex \citep{Schenk2015} gebruikt worden, in linux is LaTeX via de beheertoels te installeren. Voor het schrijven van een document is een editor nodig. Notepad$++$ \citep{Ho2015} is een vrij te gebruiken editor met ondersteuning voor verschillende talen. Verder wordt er in dit document van uit gegaan dat de software geinstalleerd is en de gebruiker bekend is met de werking van een editor. 
+
+Om gebruik te maken van de TISmeetrapport class is de cls file en het logo van de Haagse Hogeschool (HHS\_groen.jpg) nodig. De class file en afbeelding moeten in dezelfde directory staan als waar de \LaTeX file staat die het rapport moet gaan genereren. 
+
+\section{Gebruik}
+Om het TISmeetrapport te gebruiken wordt in het {\bf documentclass} commando als argument {\it TISmeetrapport} meegegeven. Daarna moeten in de header van het document de variabelen voor het voorblad ingevuld worden. In Listing \ref{lst:minimal} is een minimaal document weergegeven om alleen het voorblad te reproduceren. De rest van het meetrapport gebruikt de standaard {\bf article} class van LaTeX en kan met behulp van de {\it The Not So Short Introduction to LaTeX} \citep{Oetiker2008} uitgewerkt worden. 
+
+\begin{lstlisting}[language={[LaTeX]TeX},caption=Minimale code om het TISmeetrapport voorblad weer te geven]
+\documentclass{TISmeetrapport}
+
+\practicum{\LaTeX}
+\nummerproef{1}
+\naamproef{Voorbeeld meetrapport}
+\studentauteur{D.D.~Land}
+\studentuitvoer{D.D.~Land en L.~Arntzen}
+\studentklas{NP2.k}
+\datumuitvoer{2 mei 2015}
+\datuminleveren{\today}
+\docent{D.D.~land}
+\begin{document}
+\end{document}
+\end{lstlisting}\label{lst:minimal}
+
+\section{Op en aanmerkingen}
+Op en aanmerkingen kunnen gestuurd worden naar Derek Land (\url{d.d.land@hhs.nl}).
+
+\bibliographystyle{abbrvnat}
+\bibliography{meetrapport}
+
+\end{document}
