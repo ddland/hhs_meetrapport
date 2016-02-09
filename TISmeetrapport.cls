@@ -5,7 +5,7 @@
 %% Meetrapport class for TIS - TN 
 %% 
 %%
-%% (c)2015, D.D. Land <d.d.land@hhs.nl>
+%% (c)2015,2016 D.D. Land <d.d.land@hhs.nl>
 %% based on TISmeetrapport.cls from J. op den Brouw <J.E.J.opdenBrouw@hhs.nl>
 %%
 %% Version 0.1
@@ -20,16 +20,17 @@
 
 
 \def\fileversion{0.1}
-\def\filedate{2015/05/02}
+\def\filedate{2016/02/08}
 \edef\TISmeetrapportfileversion{\fileversion}
 \edef\TISmeetrapportfiledate{\filedate}
 
 \NeedsTeXFormat{LaTeX2e}[1995/06/01]
 
-\ProvidesClass{TISmeetrapport}[\filedate\space Version \fileversion\space TISD Exam
+\ProvidesClass{TISmeetrapport}[\filedate\space Version \fileversion\space TIS Meetrapport
 	Class by D.D. Land]
 %% zet de taal op NL
 \PassOptionsToPackage{dutch}{babel}
+\PassOptionsToPackage{small,bf}{caption}
 
 \DeclareOption{10pt}{\def\TISmeetrapport@size{10pt}}
 \DeclareOption{11pt}{\def\TISmeetrapport@size{11pt}}
@@ -47,6 +48,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{fancyhdr}
 \RequirePackage{babel}
+\RequirePackage{caption}
 
 \usetikzlibrary{calc}
 

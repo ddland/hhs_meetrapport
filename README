@@ -1,0 +1,1 @@
+Bij de opleiding Technische Natuurkunde aan de Haagse Hogeschool worden meetrapporten geschreven waarbij een standaard voorblad gewenst is. De TISmeetrapport class zorgt voor het standaard voorblad als uitbreiding op de article class van LaTeX. 
