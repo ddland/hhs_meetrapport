@@ -49,6 +49,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{babel}
 \RequirePackage{caption}
+\RequirePackage{ifthen}
 
 \usetikzlibrary{calc}
 
@@ -63,7 +64,7 @@
 \newcommand{\datumuitvoer}[1]{\def\TISmeetrapport@datumuitvoer{#1}}
 \newcommand{\datuminleveren}[1]{\def\TISmeetrapport@datuminleveren{#1}}
 \newcommand{\docent}[1]{\def\TISmeetrapport@docent{#1}}
-
+\newcommand{\datuminleverenherkansing}[1]{\def\TISmeetrapport@datuminleverenherkansing{#1}}
 \fancyhead[L]{\TISmeetrapport@practicum}
 \fancyhead[R]{\TISmeetrapport@studentauteur \hspace{1cm} \thepage}
 \pagestyle{fancy}
@@ -85,7 +86,7 @@
 \hbox{% %% proef en student informatie
 	\begin{minipage}[c]{0.99\linewidth}
 	{\fontfamily{ptm}\fontsize{14pt}{14pt}\selectfont{\normalfont
-	\begin{tabular}{p{5.5cm} l p{8.0cm}}
+	\begin{tabular}{p{6.5cm} l p{8.0cm}}
 	Proefnaam & : & \MakeUppercase{\TISmeetrapport@naamproef} \\
 	Proefnummer & : & \TISmeetrapport@nummerproef \\
 	& \\[1cm]
@@ -95,6 +96,9 @@
 	& \\[1cm]
 	Datum uitvoering proef & : & \TISmeetrapport@datumuitvoer \\
 	Datum inleveren rapport & : & \TISmeetrapport@datuminleveren \\
+        \ifthenelse{\isundefined{\TISmeetrapport@datuminleverenherkansing}}{
+        }{
+        Datum inleveren herkansing & : & \TISmeetrapport@datuminleverenherkansing \\}
 	Naam Docent & : & \TISmeetrapport@docent \\ 
 	\end{tabular}}}
 	\end{minipage}
