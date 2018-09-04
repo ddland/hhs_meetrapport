@@ -40,7 +40,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
-\LoadClass[\TISmeetrapport@size]{article}
+\LoadClass[\TISmeetrapport@size, a4paper]{article}
 \RequirePackage{xcolor}
 \RequirePackage{geometry}
 \RequirePackage{tikz}
@@ -48,7 +48,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{fancyhdr}
 \RequirePackage{babel}
-\RequirePackage{caption}
+\RequirePackage[small,bf]{caption}
 \RequirePackage{ifthen}
 
 \usetikzlibrary{calc}
@@ -131,9 +131,9 @@
 	};
 \end{tikzpicture}
 } % end hbox
-\newpage %start document on next page
-\setcounter{page}{1}
 \restoregeometry
+\setcounter{page}{1}
+\clearpage %start document on next page
 } % end newcommand - makecoverpage
 
 \endinput
